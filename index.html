@@ -14,8 +14,6 @@
         <h1 class="is-size-1 has-text-primary has-text-centered title">JavaScript Revision</h1>
     </header>
     <hr class="has-background-primary mb-1 mt-1">
-
-
     <section class="section  has-background-light">
         <div class="container">
             <h2 class="subtitle is-size-2 has-text-primary has-text-centered">Basics</h2>
@@ -51,12 +49,14 @@
                     <p>JavaScript methods are actions that can be performed on objects. A JavaScript method is a
                         property containing a function definition. Methods are functions stored as object properties.
                     </p>
-                    <code class="has-text-primary"> let first = "Hello World"; let second = "Bonvonyage Fella"</code>
-                    <p>
-                        <code>first.length, first.charAt(6) or first[6] //w  </code>
-                        <code>first.toUpperCase(), first.toLowerCase(), first.indexOf("w") //6 first.lastIndexOf('o') //7</code>
-                        <code>first.slice(2,5) //llo first.substr(2,5) //llo W  first.replace('l','d') //hedlo world   first.replaceAll('l','d') //heddo wordd</code>
-                        <code>first.localeCompare(b)? //false</code>
+                    <p class="box">
+                        <code
+                            class="has-text-primary"> let first = "Hello World"; let second = "Bonvonyage Fella"</code>
+
+                        <code> <br> first.length <br>  first.charAt(6) or first[6] //w  <br>  
+                        first.toUpperCase() <br>  first.toLowerCase() <br>  first.indexOf("w") //6 first.lastIndexOf('o') //7
+                         <br> first.slice(2,5) //llo  <br> first.substr(2,5) //llo W   <br> first.replace('l','d') //hedlo world <br>  first.replaceAll('l','d') //heddo wordd
+                         <br> first.localeCompare(b)? //false</code>
                     </p>
 
 
@@ -78,13 +78,13 @@
                         <li>Arrays are generally described as "list-like objects"; they are basically single objects
                             that contain multiple values stored in a list. </li>
                     </ul>
-                    <h4 class="is-size-4 m-0">Array Methods</h4> 
+                    <h4 class="is-size-4 m-0">Array Methods</h4>
                     <code> <br>
                        let shopping = ['Tomato', 'Apple', 'Lime', 'Red Pepper', 'Grape']; <br>
                        let food = ['Salad', 'Pizza', 'Steak', 'Buffalo Wings']; <br>
                        let age = [24,35,41,52];
                    </code>
-                    <hr class="has-background-grey" >
+                    <hr class="has-background-grey">
                     <p class="box">
                         <code>let result = shopping.join('-''); // result = Tomato-Apple-Lime...</code><br>
                         <code>let result = shopping.indexOf('Lime') // result = Red Paper</code> <br>
@@ -96,8 +96,10 @@
                         <code>let result = shopping.pop() // result = Grape</code><br>
                         <code>let result = shopping.shift() // result = Tomato</code><br>
                         <code>let result = shopping.unshift('Spinach') // result = 6 shopping includes Spinach at Shopping[0]</code><br>
-                        <code>shopping.forEach((el, index,array1)=>console.log(index, el, array1)); //array1 are shopping</code> <br>
-                        <code>//The forEach() method executes a provided function once for each array element. </code> <br>
+                        <code>shopping.forEach((el, index,array1)=>console.log(index, el, array1)); //array1 are shopping</code>
+                        <br>
+                        <code>//The forEach() method executes a provided function once for each array element. </code>
+                        <br>
                         <code>let newAge = age.map(elt => elt + 10)// [34,45,51,62] result </code> <br>
                         <code>   let newAge = age.forEach(elt => elt + 10)// undefined result </code> <br>
                         <code>//The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.</code>
@@ -229,8 +231,8 @@
                     current or labeled loop, and continues execution of the loop with the next iteration.
                     <h3 class="is-size-3">Summary</h3>
                     <p>
-                        <h3>What are the output values?</h3>
-                        <code>
+                    <h3>What are the output values?</h3>
+                    <code>
                             &nbsp;let age = 30, height=5.6; <br>
                             &nbsp;if(true){ <br>
                                 &nbsp;&nbsp; age=40; let height = 6.5; let name="Tom" <br>
@@ -243,50 +245,64 @@
                 </div>
             </div>
             <h2 class="title is-size-2 has-text-centered has-text-primary">JavaScript Functions </h2>
-            
+
 
             <div class="columns is-desktop">
                 <div class="column is-9">
                     <h3 class="is-size-3 has-text-centered">Notes</h3>
-                    <div class="content">                    
+                    <div class="content">
                         <ul>
-                        <li>Functions are one of the fundamental building blocks in javascript. They are sets of statements that perform a task or calculates a value.</li>
-                        <li>A JavaScript function is a block of code designed to perform a particular task.</li>
-                        <li>
-                            <ul><strong>Function Defintion / Function Declaration or Function Statement</strong> consists of 
-                                the <code>function</code> keyword, followed by  
-                                <li>the name of the function</li>
-                                <li>A list of parameters to the function, enclosed by paranthesis and separated by commas. </li>
-                                <li>The JS statements that define the function, enclosed in curley brackets {...} </li>
-                            </ul>
-                        </li>
-                        <li>The keyvalue <code>return</code> specifies the value returned by the function.</li>
-                        <li>A method is a function that is a property of an object.</li>
-                        <li>Defining a function does not execute it. Defining it names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters</li>
-                        <li>Functions must be in scope when they are called, but the function declaration can be <em class="has-text-danger"> hoisted (appear below the call in the code)</em>
-                            <code> <br>
+                            <li>Functions are one of the fundamental building blocks in javascript. They are sets of
+                                statements that perform a task or calculates a value.</li>
+                            <li>A JavaScript function is a block of code designed to perform a particular task.</li>
+                            <li>
+                                <ul><strong>Function Defintion / Function Declaration or Function Statement</strong>
+                                    consists of
+                                    the <code>function</code> keyword, followed by
+                                    <li>the name of the function</li>
+                                    <li>A list of parameters to the function, enclosed by paranthesis and separated by
+                                        commas. </li>
+                                    <li>The JS statements that define the function, enclosed in curley brackets {...}
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>The keyvalue <code>return</code> specifies the value returned by the function.</li>
+                            <li>A method is a function that is a property of an object.</li>
+                            <li>Defining a function does not execute it. Defining it names the function and specifies
+                                what to do when the function is called. Calling the function actually performs the
+                                specified actions with the indicated parameters</li>
+                            <li>Functions must be in scope when they are called, but the function declaration can be <em
+                                    class="has-text-danger"> hoisted (appear below the call in the code)</em>
+                                <code> <br>
                                 square(5);<br>
                                 function square(x){ <br>
                                 return x*x; <br>
                                 } <br>
                                 
                             </code>
-                        </li>
-                        <li>The scope of a function is the function in which it is declared (or the entire program, if it is declared at the top level).
-                            <em class="has-text-danger">works only when defining the function using the above syntax (i.e. function funcName(){}).</em>
-                            <br>The following program results in syntax error, the delaration should be at the top<br>
-                            <strong class="has-text-danger">Function hoisting only works with function declarations—not with function expressions.</strong>
-                            <br><code> <br>
+                            </li>
+                            <li>The scope of a function is the function in which it is declared (or the entire program,
+                                if it is declared at the top level).
+                                <em class="has-text-danger">works only when defining the function using the above syntax
+                                    (i.e. function funcName(){}).</em>
+                                <br>The following program results in syntax error, the delaration should be at the
+                                top<br>
+                                <strong class="has-text-danger">Function hoisting only works with function
+                                    declarations—not with function expressions.</strong>
+                                <br><code> <br>
                                 square(5);<br>
                                 const square = function(x){ <br>
                                 return x*x; <br>
                                 };//semi colon is possible in function expression but not in function declaration <br>
                                 <br>Function expressions in JavaScript are not hoisted, unlike function declarations.
-                            </code><br> 
-                            Javascript doesn't hoist function expressions <code>const myFunc = function(){statements}</code>, it hoists only function declarations <code>function myFunct(){//statements}</code>.
-                            <p>To avoid confusion, just declare the function first and invoke it.  </p>
-                            <br>The following program works fine because the declaration or entire program is at the top<br>
-                            <code> <br>
+                            </code><br>
+                                Javascript doesn't hoist function expressions
+                                <code>const myFunc = function(){statements}</code>, it hoists only function declarations
+                                <code>function myFunct(){//statements}</code>.
+                                <p>To avoid confusion, just declare the function first and invoke it. </p>
+                                <br>The following program works fine because the declaration or entire program is at the
+                                top<br>
+                                <code> <br>
                                 
                                const square = function(x){ <br>
                                 return x*x; <br>
@@ -294,12 +310,19 @@
                                 square(5);<br>
                                 
                             </code>
-                        </li>
-                        <li>A function that calls itself is called a recursive function. In some ways, recursion is analogous to a loop. Both execute the same code multiple times, and both require a condition (to avoid an infinite loop, or rather, infinite recursion in this case).</li>
-                        <li>A closure is an expression (most commonly, a function) that can have free variables together with an environment that binds those variables (that "closes" the expression).</li>
-                        <li>The main difference between a function expression and a function declaration is the function name, which can be omitted in function expressions to create anonymous functions. A function expression can be used as an IIFE (Immediately Invoked Function Expression) which runs as soon as it is defined. </li>
-                        <li>You can give parameters a default value <br>
-                            <code>
+                            </li>
+                            <li>A function that calls itself is called a recursive function. In some ways, recursion is
+                                analogous to a loop. Both execute the same code multiple times, and both require a
+                                condition (to avoid an infinite loop, or rather, infinite recursion in this case).</li>
+                            <li>A closure is an expression (most commonly, a function) that can have free variables
+                                together with an environment that binds those variables (that "closes" the expression).
+                            </li>
+                            <li>The main difference between a function expression and a function declaration is the
+                                function name, which can be omitted in function expressions to create anonymous
+                                functions. A function expression can be used as an IIFE (Immediately Invoked Function
+                                Expression) which runs as soon as it is defined. </li>
+                            <li>You can give parameters a default value <br>
+                                <code>
                             const uName = function (first='Tom', last='Luigi'){ <br>
                                 console.log(first, last) <br>
                                 }; <br>
@@ -307,23 +330,25 @@
                             </code>
 
 
-                        </li>
-                    </ul>
-                    <p>
+                            </li>
+                        </ul>
+                        <p>
                         <h4 class="is-size-4">Arrow Functions</h4>
                         Arrow functions are a cleaner and shorter way of writing a function.
                         <h4 class="is-size-4">Methods vs Functions</h4>
                         Methods differ from function the way we invoked them and where they are defined.
-                        Methods are invoked in dot notation. Example <code>'hi'.toUpperCase();</code>. 
-                        A method, like a function, is a set of instructions that perform a task. The difference is that a method is associated with an object, while a function is not.
+                        Methods are invoked in dot notation. Example <code>'hi'.toUpperCase();</code>.
+                        A method, like a function, is a set of instructions that perform a task. The difference is that
+                        a method is associated with an object, while a function is not.
                         <h4 class="is-size-4">Callback Functions</h4>
-                        A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
-                    </p>
-                </div>
+                        A callback function is a function passed into another function as an argument, which is then
+                        invoked inside the outer function to complete some kind of routine or action.
+                        </p>
+                    </div>
 
 
                 </div>
-               
+
             </div>
 
         </div>
@@ -331,7 +356,7 @@
     <footer>
         <h3 class="subtitle has-text-primary"></h3>
     </footer>
-<script src="resources/app.js"></script>
+    <script src="resources/app.js"></script>
 </body>
 
 </html>
