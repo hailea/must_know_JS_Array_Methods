@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>JS Revision</title>
+</head>
+
+<body>
+    <header class=" mb-0 pb-0 px-3 has-background-light">
+        <h1 class="is-size-1 has-text-primary has-text-centered title">JavaScript Revision</h1>
+    </header>
+    <hr class="has-background-primary mb-1 mt-1">
+
+
+    <section class="section  has-background-light">
+        <div class="container">
+            <h2 class="subtitle is-size-2 has-text-primary has-text-centered">Basics</h2>
+            <div class="columns">
+                <div class="column is-9">
+                    <p>
+                    <h4 class="is-size-4">Strings</h4>
+
+                    <ol type="1" class="ml-4">
+                        <li>The String object is used to represent and manipulate a sequence of characters.</li>
+                        <li>Strings are useful for holding data that can be represented in text form.</li>
+                        <li>Strings can be created as primitives, from string literals, or as objects, using the
+                            String()
+                            constructor:<code>let string1 = "Hello World!!!"; let string2 = new String("Hello World!!!")</code>
+                        </li>
+                        <li>String literals can be specified using single or double quotes, which are treated
+                            identically, or using the backtick
+                            character `. This last form specifies a template literal: with this form you can interpolate
+                            expressions.</li>
+                        <li>Template literals/ template strings are string literals allowing embedded expressions. You
+                            can use multi-line strings and string interpolation features with them.</li>
+                        <li>Type conversions: Converting Strings to Numbers (Number("56") + 1 = 57),Converting Numbers
+                            to Strings,
+                            Converting Dates to Numbers,
+                            Converting Numbers to Dates,
+                            Converting Booleans to Numbers and
+                            Converting Numbers to Booleans.</li>
+                    </ol>
+
+                    </p>
+                    <p>
+                    <h4 class="is-size-4">Common String Methods</h4>
+                    <p>JavaScript methods are actions that can be performed on objects. A JavaScript method is a
+                        property containing a function definition. Methods are functions stored as object properties.
+                    </p>
+                    <code class="has-text-primary"> let first = "Hello World"; let second = "Bonvonyage Fella"</code>
+                    <p>
+                        <code>first.length, first.charAt(6) or first[6] //w  </code>
+                        <code>first.toUpperCase(), first.toLowerCase(), first.indexOf("w") //6 first.lastIndexOf('o') //7</code>
+                        <code>first.slice(2,5) //llo first.substr(2,5) //llo W  first.replace('l','d') //hedlo world   first.replaceAll('l','d') //heddo wordd</code>
+                        <code>first.localeCompare(b)? //false</code>
+                    </p>
+
+
+                    </p>
+                    <h3 class="is-size-3">Summary</h3>
+                    <p>The javascript data type null explicitely set a variable with no value. But the js data type
+                        undefined means that have not yet been defined.</p>
+                    <p>Object in javascript is a complex data structure arrays, dates literals and so on.</p>
+                </div>
+            </div>
+            <h2 class="subtitle is-size-2 has-text-primary has-text-centered">JavaScript Arrays
+            </h2>
+
+            <div class="columns">
+                <div class="column is-9">
+                    <h4 class="is-size-4">What are arrays?</h4>
+                    <ul class="ml-4">
+                        <li> Arrays are a neat way of storing a list of data items under a single variable name.</li>
+                        <li>Arrays are generally described as "list-like objects"; they are basically single objects
+                            that contain multiple values stored in a list. </li>
+                    </ul>
+                    <h4 class="is-size-4 m-0">Array Methods</h4> 
+                    <code> <br>
+                       let shopping = ['Tomato', 'Apple', 'Lime', 'Red Pepper', 'Grape']; <br>
+                       let food = ['Salad', 'Pizza', 'Steak', 'Buffalo Wings']; <br>
+                       let age = [24,35,41,52];
+                   </code>
+                    <hr class="has-background-grey" >
+                    <p class="box">
+                        <code>let result = shopping.join('-''); // result = Tomato-Apple-Lime...</code><br>
+                        <code>let result = shopping.indexOf('Lime') // result = Red Paper</code> <br>
+                        <code>let result = shopping.slice(3,4) // result = 2</code> <br>
+                        <code>let result = shopping.splice(3,1) // result = shopping will be modified, and Red Paper is eliminated</code>
+                        <br>
+                        <code>let result = shopping.concat(food);//works for strings and arrays</code> <br>
+                        <code>let result = shopping.push('Rice') // result = 6 shopping includes Rice</code><br>
+                        <code>let result = shopping.pop() // result = Grape</code><br>
+                        <code>let result = shopping.shift() // result = Tomato</code><br>
+                        <code>let result = shopping.unshift('Spinach') // result = 6 shopping includes Spinach at Shopping[0]</code><br>
+                        <code>shopping.forEach((el, index,array1)=>console.log(index, el, array1)); //array1 are shopping</code> <br>
+                        <code>//The forEach() method executes a provided function once for each array element. </code> <br>
+                        <code>let newAge = age.map(elt => elt + 10)// [34,45,51,62] result </code> <br>
+                        <code>   let newAge = age.forEach(elt => elt + 10)// undefined result </code> <br>
+                        <code>//The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.</code>
+                    </p>
+
+                </div>
+            </div>
+            <h2 class="title is-size-2 has-text-centered has-text-primary">Control Flow</h2>
+
+            <div class="columns">
+                <div class="column is-9">
+                    <h3 class="is-size-3 has-text-centered">Notes</h3>
+                    <p>
+                        The control flow is the order in which the computer executes statements in a script.
+                        Code is run in order from the first line in the file to the last line, unless the computer runs
+                        across the (extremely frequent) structures that change the control flow, such as conditionals
+                        and loops.
+                    </p>
+                    <div class="p-3 has-background-danger has-text-white">
+                        <h4 class="is-size-4">For loop</h4>
+                        <div>
+                            <h5 class="is-size-5">Syntax</h5>
+                            <code>
+                            for (statement 1; statement 2; statement 3){ <br>
+                                execute code block
+                            }
+                        </code>
+                        </div>
+                        <hr class="has-background-primary">
+                        <div>
+                            <ul>
+                                <li>Statement 1 is executed once before the code block is run.</li>
+                                <li>Statement 2 defines the condition needed to execute the code block.</li>
+                                <li>Statement 3 is executed every time the code block is run.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-3 has-background-primary has-text-white">
+                        <h4 class="is-size-4">while loop</h4>
+                        <p>The while statement creates a loop that executes a specified statement as long as the test
+                            condition evaluates to true.</p>
+                        <div>
+                            <h5 class="is-size-5">Syntax</h5>
+                            <code class="has-background-primary">
+                                &nbsp;while (condition){ <br>
+                                    &nbsp;&nbsp; statement <br>
+                                    &nbsp;}
+                        </code>
+                        </div>
+                        <hr class="has-background-info">
+                        <div>
+                            <ul>
+                                <li>Condition:- An expression evaluated before each pass through the loop. If this
+                                    condition evaluates to true, statement is executed. When condition evaluates to
+                                    false, execution continues with the statement after the while loop.</li>
+                                <li>statement:- An optional statement that is executed as long as the condition
+                                    evaluates to true. To execute multiple statements within the loop, use a block
+                                    statement ({ ... }) to group those statements.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-3 has-background-info has-text-white">
+                        <h4 class="is-size-4">do while loop</h4>
+                        <p>
+                            The do...while statement creates a loop that executes a specified statement until the test
+                            condition evaluates to false. The condition is evaluated after executing the statement,
+                            resulting in the specified statement <strong>executing at least once</strong>.
+
+                        </p>
+                        <div>
+                            <h5 class="is-size-5">Syntax</h5>
+                            <code class="has-background-info">
+                        &nbsp;do <br>
+                        &nbsp;&nbsp;&nbsp;statement <br>
+                        &nbsp;while (condition);
+                    </code>
+                        </div>
+                        <hr class="has-background-warning">
+                        <div>
+                            <ul>
+                                <li>statement: - A statement that is executed at least once and is re-executed each time
+                                    the condition evaluates to true. To execute multiple statements within the loop, use
+                                    a block statement ({ ... }) to group those statements.</li>
+                                <li>Condition:- An expression evaluated after each pass through the loop. If condition
+                                    evaluates to true, the statement is re-executed. When condition evaluates to false,
+                                    control passes to the statement following the do...while.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-3 has-background-warning has-text-black">
+                        <h4 class="is-size-4">Switch</h4>
+                        <p>
+                            The switch statement evaluates an expression, matching the expression's value to a case
+                            clause, and executes statements associated with that case, as well as statements in cases
+                            that follow the matching case.
+                        </p>
+                        <div>
+                            <h5 class="is-size-5">Syntax</h5>
+                            <code class="has-background-warning">
+                                &nbsp;switch (expression) { <br>
+                                    &nbsp;&nbsp;case value1: <br>
+                                    &nbsp;&nbsp;&nbsp;//Statements executed when the result of expression matches value1 <br>
+                                    &nbsp;&nbsp;[break;] <br>
+                                    &nbsp;&nbsp;case value2: <br>
+                                    &nbsp;&nbsp;&nbsp;//Statements executed when the result of expression matches value1 <br>
+                                    &nbsp;&nbsp;[break;] <br>
+                                    &nbsp;&nbsp;case value3: <br>
+                                    &nbsp;&nbsp;&nbsp;//Statements executed when the result of expression matches value1 <br>
+                                    &nbsp;&nbsp;[break;] <br>
+                                    &nbsp;&nbsp;default: <br>
+                                    &nbsp;&nbsp;&nbsp;Statements executed when none of the values match the value of the expression <br>
+                                    &nbsp;&nbsp;[break;]] <br>
+                                  }
+                            </code>
+                        </div>
+                        <hr class="has-background-success">
+                        <div>
+                            <ul>
+                                <li>statement: - A statement that is executed at least once and is re-executed each time
+                                    the condition evaluates to true. To execute multiple statements within the loop, use
+                                    a block statement ({ ... }) to group those statements.</li>
+                                <li>Condition:- An expression evaluated after each pass through the loop. If condition
+                                    evaluates to true, the statement is re-executed. When condition evaluates to false,
+                                    control passes to the statement following the do...while.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    The continue statement terminates execution of the statements in the current iteration of the
+                    current or labeled loop, and continues execution of the loop with the next iteration.
+                    <h3 class="is-size-3">Summary</h3>
+                    <p>
+                        <h3>What are the output values?</h3>
+                        <code>
+                            &nbsp;let age = 30, height=5.6; <br>
+                            &nbsp;if(true){ <br>
+                                &nbsp;&nbsp; age=40; let height = 6.5; let name="Tom" <br>
+                                &nbsp;&nbsp; console.log(age, height, name); <br>
+                                &nbsp;&nbsp;} <br>
+                                &nbsp;console.log(age, height, name); <br>
+                        </code>
+                    </p>
+
+                </div>
+            </div>
+            <h2 class="title is-size-2 has-text-centered has-text-primary">JavaScript Functions </h2>
+            
+
+            <div class="columns is-desktop">
+                <div class="column is-9">
+                    <h3 class="is-size-3 has-text-centered">Notes</h3>
+                    <div class="content">                    
+                        <ul>
+                        <li>Functions are one of the fundamental building blocks in javascript. They are sets of statements that perform a task or calculates a value.</li>
+                        <li>A JavaScript function is a block of code designed to perform a particular task.</li>
+                        <li>
+                            <ul><strong>Function Defintion / Function Declaration or Function Statement</strong> consists of 
+                                the <code>function</code> keyword, followed by  
+                                <li>the name of the function</li>
+                                <li>A list of parameters to the function, enclosed by paranthesis and separated by commas. </li>
+                                <li>The JS statements that define the function, enclosed in curley brackets {...} </li>
+                            </ul>
+                        </li>
+                        <li>The keyvalue <code>return</code> specifies the value returned by the function.</li>
+                        <li>A method is a function that is a property of an object.</li>
+                        <li>Defining a function does not execute it. Defining it names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters</li>
+                        <li>Functions must be in scope when they are called, but the function declaration can be <em class="has-text-danger"> hoisted (appear below the call in the code)</em>
+                            <code> <br>
+                                square(5);<br>
+                                function square(x){ <br>
+                                return x*x; <br>
+                                } <br>
+                                
+                            </code>
+                        </li>
+                        <li>The scope of a function is the function in which it is declared (or the entire program, if it is declared at the top level).
+                            <em class="has-text-danger">works only when defining the function using the above syntax (i.e. function funcName(){}).</em>
+                            <br>The following program results in syntax error, the delaration should be at the top<br>
+                            <strong class="has-text-danger">Function hoisting only works with function declarations—not with function expressions.</strong>
+                            <br><code> <br>
+                                square(5);<br>
+                                const square = function(x){ <br>
+                                return x*x; <br>
+                                };//semi colon is possible in function expression but not in function declaration <br>
+                                <br>Function expressions in JavaScript are not hoisted, unlike function declarations.
+                            </code><br> 
+                            Javascript doesn't hoist function expressions <code>const myFunc = function(){statements}</code>, it hoists only function declarations <code>function myFunct(){//statements}</code>.
+                            <p>To avoid confusion, just declare the function first and invoke it.  </p>
+                            <br>The following program works fine because the declaration or entire program is at the top<br>
+                            <code> <br>
+                                
+                               const square = function(x){ <br>
+                                return x*x; <br>
+                                } <br>
+                                square(5);<br>
+                                
+                            </code>
+                        </li>
+                        <li>A function that calls itself is called a recursive function. In some ways, recursion is analogous to a loop. Both execute the same code multiple times, and both require a condition (to avoid an infinite loop, or rather, infinite recursion in this case).</li>
+                        <li>A closure is an expression (most commonly, a function) that can have free variables together with an environment that binds those variables (that "closes" the expression).</li>
+                        <li>The main difference between a function expression and a function declaration is the function name, which can be omitted in function expressions to create anonymous functions. A function expression can be used as an IIFE (Immediately Invoked Function Expression) which runs as soon as it is defined. </li>
+                        <li>You can give parameters a default value <br>
+                            <code>
+                            const uName = function (first='Tom', last='Luigi'){ <br>
+                                console.log(first, last) <br>
+                                }; <br>
+                                uName('Tom', 'Luigi');
+                            </code>
+
+
+                        </li>
+                    </ul>
+                    <p>
+                        <h4 class="is-size-4">Arrow Functions</h4>
+                        Arrow functions are a cleaner and shorter way of writing a function.
+                        <h4 class="is-size-4">Methods vs Functions</h4>
+                        Methods differ from function the way we invoked them and where they are defined.
+                        Methods are invoked in dot notation. Example <code>'hi'.toUpperCase();</code>. 
+                        A method, like a function, is a set of instructions that perform a task. The difference is that a method is associated with an object, while a function is not.
+                        <h4 class="is-size-4">Callback Functions</h4>
+                        A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+                    </p>
+                </div>
+
+
+                </div>
+               
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <h3 class="subtitle has-text-primary"></h3>
+    </footer>
+<script src="resources/app.js"></script>
+</body>
+
+</html>
